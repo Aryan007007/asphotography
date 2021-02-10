@@ -10,7 +10,7 @@ html {
 
 header {
   /* margin: 5px; */
-  background-image: url("https://picsum.photos/id/100/1920/1080");
+  background-image: url("https://picsum.photos/id/1004/1920/1080?blur");
   background-size: cover;
   background-position: center;
   width: calc(100%);
@@ -21,7 +21,7 @@ header {
 nav {
   width: 100%;
   padding: 12px 50px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   height: 75px;
   display: flex;
   flex-direction: row;
@@ -116,13 +116,14 @@ footer {
 }
 
 footer h1 {
+  font-size: 24px;
   margin: 50px auto 0;
   color: white;
   letter-spacing: 2px;
 }
 
 .socials {
-  margin: 50px auto 0;
+  margin: 20px auto 0;
   color: white;
   font-size: 32px;
 }
@@ -132,19 +133,19 @@ footer h1 {
 }
 
 footer p {
-  margin: 50px auto;
+  margin: 20px auto 50px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 769px) {
   main {
-    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 }
 
 @media screen and (max-width: 500px) {
   main {
-    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-template-columns: 1fr;
   }
 }
