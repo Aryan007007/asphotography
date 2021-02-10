@@ -1,68 +1,150 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    min-height: 100%;
+html {
+  min-height: 100%;
 }
 
-header{
-    width: 100%;
-    height: 100vh;
-    background-color: lightslategray;
+header {
+  /* margin: 5px; */
+  background-image: url("https://picsum.photos/id/100/1920/1080");
+  background-size: cover;
+  background-position: center;
+  width: calc(100%);
+  height: 100vh;
+  background-color: lightslategray;
 }
 
-nav{
-    padding: 12px;
-    background-color: royalblue;
-    height: 75px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+nav {
+  width: 100%;
+  padding: 12px 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.logo{
-    background-color: lightslategrey;
-    width: 50px;
-    height: 50px;
+.logo {
+  background-color: lightslategrey;
+  width: 50px;
+  height: 50px;
 }
 
-.menu-btn{
-    background-color: lightslategrey;
-    width: 30px;
-    height: 20px;
-    align-self: center;
+.menu-btn {
+  color: white;
+  font-size: 32px;
+  align-self: center;
+  cursor: pointer;
 }
 
-main{
-    margin: 5px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    gap: 5px;
+.menu-btn i {
+  transition: all 0.3s;
 }
 
-main div{
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    background-color: lightgrey;
+.menu-btn:hover i {
+  transform: translateY(5px);
 }
 
-footer{
-    height: 40vh;
-    background-color: lightpink;
+main {
+  /* margin: 5px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  /* gap: 5px; */
 }
 
-@media screen and (max-width:769px){
-    main{
-        grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
-    }
+main div {
+  position: relative;
+  width: 100%;
 }
 
-@media screen and (max-width: 500px){
-    main{
-        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-    }
+main div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+.overlay {
+  color: white;
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  position: absolute;
+  opacity: 1;
+  bottom: 5px;
+  left: 0;
+}
+
+.overlay h1 {
+  margin-bottom: -15px;
+  padding-left: 20px;
+  font-size: 22px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.overlay p {
+  position: relative;
+  opacity: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.overlay h1 em {
+  font-style: normal;
+  font-weight: lighter;
+}
+
+main div:hover .overlay h1 {
+  opacity: 1;
+  transform: translateY(-25px);
+}
+
+main div:hover .overlay p {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  font-family: "Kanit", sans-serif;
+}
+
+footer h1 {
+  margin: 50px auto 0;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.socials {
+  margin: 50px auto 0;
+  color: white;
+  font-size: 32px;
+}
+
+.socials span:not(:first-child) {
+  margin-left: 20px;
+}
+
+footer p {
+  margin: 50px auto;
+  color: white;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 769px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+}
