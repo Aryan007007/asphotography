@@ -18,6 +18,29 @@ header {
   background-color: lightslategray;
 }
 
+.header-text {
+  border: 2px solid white;
+  text-align: center;
+  z-index: 1;
+  padding: 20px 50px;
+  background-color: rgba(200, 200, 200, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.header-text h1 {
+  font-size: 60px;
+  font-family: "Asul", sans-serif;
+}
+
+.header-text p {
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+}
+
 .video-container {
   position: relative;
   height: fit-content;
@@ -29,7 +52,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(27, 0, 37, 0.4);
 }
 .video-container video {
   width: 100%;
@@ -38,11 +61,14 @@ header {
 }
 
 nav {
-  position: relative;
-  width: 100%;
-  padding: 12px 50px;
+  border-radius: 2px;
+  position: fixed;
+  z-index: 1;
+  width: calc(100% - 10px);
+  margin: 5px 5px 0 5px;
+  padding: 6px 50px;
   background-color: rgba(255, 255, 255, 1);
-  height: 75px;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,8 +76,8 @@ nav {
 
 .logo {
   /* background-color: lightslategrey; */
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo img {
@@ -99,7 +125,7 @@ main div img {
   left: 0;
   background: radial-gradient(
     circle,
-    rgba(200, 200, 200, 0.1) 10%,
+    rgba(200, 200, 200, 0.1) 0%,
     rgba(0, 0, 0, 0.4) 70%
   );
 }
@@ -149,10 +175,10 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: black;
-  font-family: "Kanit", sans-serif;
 }
 
 footer h1 {
+  font-family: "Asul", sans-serif;
   font-size: 24px;
   margin: 50px auto 0;
   color: white;
@@ -160,7 +186,7 @@ footer h1 {
 }
 
 .socials {
-  margin: 20px auto 0;
+  margin: 40px auto 0;
   color: white;
   font-size: 32px;
 }
@@ -170,9 +196,26 @@ footer h1 {
 }
 
 footer p {
+  font-family: "Montserrat", sans-serif;
   margin: 20px auto 50px;
   color: white;
   font-size: 16px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p img {
+  display: inline-block;
+  width: 30px;
+  transform: translateY(10px);
+}
+
+footer p em {
+  font-size: 20px;
+  font-style: normal;
 }
 
 @media screen and (max-width: 769px) {
@@ -184,5 +227,9 @@ footer p {
 @media screen and (max-width: 500px) {
   main {
     grid-template-columns: 1fr;
+  }
+
+  nav {
+    border-radius: 25px;
   }
 }
