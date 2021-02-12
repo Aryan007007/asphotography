@@ -61,14 +61,14 @@ header {
 }
 
 nav {
-  border-radius: 2px;
+  border-radius: 5px;
   position: fixed;
   z-index: 1;
   width: calc(100% - 10px);
   margin: 5px 5px 0 5px;
-  padding: 6px 50px;
-  background-color: rgba(255, 255, 255, 1);
-  height: 50px;
+  padding: 10px 50px;
+  background-color: black;
+  height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -76,16 +76,20 @@ nav {
 
 .logo {
   /* background-color: lightslategrey; */
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .logo img {
+  border-radius: 50%;
+  border: 2px solid #8c6331;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .menu-btn {
-  color: purple;
+  color: #8c6331;
   font-size: 32px;
   align-self: center;
   cursor: pointer;
@@ -126,7 +130,7 @@ main div img {
   background: radial-gradient(
     circle,
     rgba(200, 200, 200, 0.1) 0%,
-    rgba(0, 0, 0, 0.4) 70%
+    rgba(0, 0, 0, 0.6) 100%
   );
 }
 
@@ -196,6 +200,7 @@ footer h1 {
 }
 
 footer p {
+  word-spacing: 5px;
   font-family: "Montserrat", sans-serif;
   margin: 20px auto 50px;
   color: white;
@@ -203,14 +208,17 @@ footer p {
 }
 
 footer p a {
+  word-spacing: 1px;
   text-decoration: none;
   color: white;
 }
 
 footer p img {
+  border: 2px solid #8c6331;
+  border-radius: 50%;
   display: inline-block;
-  width: 30px;
-  transform: translateY(10px);
+  width: 40px;
+  transform: translateY(14px);
 }
 
 footer p em {
